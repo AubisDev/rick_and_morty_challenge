@@ -11,7 +11,7 @@ const Morty: React.FC<Props> = ({ isActive }) => {
   const mortyImage: string = !isActive ? morty1 : morty2;  
   return (
     <motion.img
-      className="absolute bottom-0 left-0 w-[25vw] -rotate-12 drop-shadow-morty"
+      className="absolute bottom-0 left-0 w-[20vw] -rotate-6 drop-shadow-morty hidden lg:block xl:w-[25vw] "
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}

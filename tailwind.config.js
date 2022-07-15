@@ -7,7 +7,8 @@ module.exports = {
         'character':'#c542b0',
         'episode': '#9bf264',
         'locations': '#e7e179',
-        'home': '#9dd4d9'
+        'home': '#9dd4d9',
+        'green_slime': '#9bf264',
       },
       backgroundImage: {
       },
@@ -16,7 +17,10 @@ module.exports = {
       },
       boxShadow: {
         'menu': '0 35px 50px -15px rgba(155,242,100,0.5)',
-      }
+      },
+      colors: {
+        'green_slime': '#9bf264',
+      },
     },
   },
   plugins: [],

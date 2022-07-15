@@ -4,11 +4,11 @@ import Run_Morty from './../../assets/images/morty-running.gif';
 
 const Loader = () => {
   return (
-    <div className="absolute bottom-0 w-[15vw]">
-      <h1 className="text-white font-xl text-right">Loading...</h1>
+    <div className="absolute bottom-0 w-[15vw] ">
+      <h1 className="text-white font-2xl text-right">Loading...</h1>
       <motion.img 
         className={` translate duration-500 -rotate-12 drop-shadow-morty `}
-        initial={{ opacity: 0.25 }}
+        initial={{ opacity: 0.25, y: -50 }}
         animate={{ opacity: 1, x: [0,200] }}
         transition = {{ duration: 1, ease: "easeInOut" }}
         exit={{ opacity: 0 }}
