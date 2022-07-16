@@ -1,3 +1,5 @@
+const { url } = require('inspector');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}',],
@@ -11,12 +13,14 @@ module.exports = {
         'green_slime': '#9bf264',
       },
       backgroundImage: {
+        'char': 'url("/src/assets/images/home_bg.jpg")'
       },
       dropShadow: {
         "morty": '0 10px 6px rgba(180,180,180,0.5)'
       },
       boxShadow: {
         'menu': '0 35px 50px -15px rgba(155,242,100,0.5)',
+        'card' : '5px 5px 15px rgba(0,0,0,0.9)'
       },
       colors: {
         'green_slime': '#9bf264',
