@@ -1,0 +1,22 @@
+.previous{
+  padding-right: 1rem;
+}
+
+.next{
+  padding-left: 1rem;
+
+}
+
+ul li:hover {
+  color: rgb(96 165 250);
+}
+
+li{
+  padding: 0 0.5rem;
+  font-weight: bold;
+}
+
+.selected { 
+  color: rgb(96 165 250);
+  cursor: none;
+}

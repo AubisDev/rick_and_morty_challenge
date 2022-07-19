@@ -20,7 +20,8 @@ module.exports = {
       },
       boxShadow: {
         'menu': '0 35px 50px -15px rgba(155,242,100,0.5)',
-        'card' : '5px 5px 15px rgba(0,0,0,0.9)'
+        'card' : '5px 5px 15px rgba(0,0,0,0.9)',
+        'imagen' : '5px 5px 15px rgba(0,0,0,0.75)'
       },
       colors: {
         'green_slime': '#9bf264',
