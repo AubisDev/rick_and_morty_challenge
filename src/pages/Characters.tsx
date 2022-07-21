@@ -45,7 +45,7 @@ const Characters: React.FC<Props> = ({page, setPage }) => {
     <>
       <Navbar/>
       
-      <main className="w-[80vw] h-auto my-5 m-auto border border-[#9bf264]  z-50 ">
+      <main className="w-[80vw] h-auto my-5 m-auto border border-[#9bf264] z-50  ">
         <input
           name="search"
           placeholder="Busca tu personaje favorito"

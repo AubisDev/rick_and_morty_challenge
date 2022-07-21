@@ -11,8 +11,14 @@ const Navbar = () => {
       </Link>
       <ul className='flex flex-row  font-serif text-white text-xl'>
         { 
-          ['Home', 'Characters', 'Locations', 'Episodes'].map( page => (
-            <li key={page} className="hidden md:block px-3 hover:text-blue-400 duration-300 cursor-pointer font-light">{page} </li>
+          ['Home', 'Characters', 'Locations', 'Episodes'].map( (page:string) => (
+            <Link 
+              key={page} 
+              to={  page === 'Home' ? '/' : `/${page.toLowerCase()}` } 
+              className="hidden md:block px-3 hover:text-blue-400 duration-300 cursor-pointer font-light"
+            >
+              {page} 
+            </Link>
           ))
         }
       </ul>

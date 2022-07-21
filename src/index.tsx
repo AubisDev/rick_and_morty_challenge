@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import PageRoutes from './routes/PageRoutes';
+import PageRoutes from './routes/routes';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
