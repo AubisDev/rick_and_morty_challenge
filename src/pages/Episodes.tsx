@@ -9,19 +9,9 @@ import season4 from './../assets/images/season4.jpg'
 import season5 from './../assets/images/season5.jpg'
 import { motion } from "framer-motion";
 import EpisodeCard from "../components/EpisodeCard/EpisodeCard";
+import { EpisodesData, SeasonsData } from '../types';
 
 
-interface EpisodesData {
-  id: number;
-  name: string;
-  episode: string;
-  characters: string[];
-}
-
-interface SeasonsData {
-  season: string;
-  image: string;
-}
 
 const Episodes = () => {
 

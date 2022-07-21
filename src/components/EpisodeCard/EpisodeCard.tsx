@@ -1,18 +1,6 @@
 import React from 'react'
+import { EpisodeCardProps } from '../../types';
 import Episode from '../Episode/Episode';
-
-type Episodes = {
-  name:string;
-  episode: string;
-  id: number;
-}
-
-interface EpisodeCardProps {
-  index: number;
-  image: string;
-  season: string;
-  episodes: Episodes[];
-}
 
 
 

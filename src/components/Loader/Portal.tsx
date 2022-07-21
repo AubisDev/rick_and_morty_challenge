@@ -2,7 +2,6 @@ import React from 'react'
 import portal from './../../assets/images/portal.png';
 import { motion } from "framer-motion";
 
-
 type Props = {
   isActive: boolean;
 }

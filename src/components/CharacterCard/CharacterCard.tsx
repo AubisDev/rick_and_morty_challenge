@@ -1,17 +1,12 @@
 import React from 'react'
 import './CharacterCard.css';
-import { CharactersData } from '../../pages/Characters';
 import { useState } from 'react';
 import CharacterModal from '../CharacterModal/CharacterModal';
 import { motion  } from 'framer-motion' ;
+import { CharacterCardProps } from '../../types';
 
 
-type Props = {
-  character: CharactersData;
-}
-
-
-const CharacterCard: React.FC<Props> = ({ character })=> {
+const CharacterCard: React.FC<CharacterCardProps> = ({ character })=> {
   const { name, image } = character;
   const [openModal, setOpenModal] = useState(false);
 

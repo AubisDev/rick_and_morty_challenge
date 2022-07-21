@@ -1,15 +1,11 @@
 import React from 'react'
 import ReactPaginate from 'react-paginate';
 import './Pagination.css';
-
-type Props = { 
-  page:number;
-  setPage: (page:number) => void;
-}
+import { PaginationProps } from '../../types';
 
 
-const Pagination : React.FC<Props> = ({page,setPage }) => {
 
+const Pagination : React.FC<PaginationProps> = ({page,setPage }) => {
 
   const handlePagination = (e:any ) => {
     setPage(e.nextSelectedPage + 1);

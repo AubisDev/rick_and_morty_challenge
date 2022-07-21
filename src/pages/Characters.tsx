@@ -5,28 +5,10 @@ import axios, { AxiosResponse } from "axios";
 import Navbar from "../components/Navbar/Navbar";
 import Pagination from "../components/Pagination/Pagination";
 import { motion } from 'framer-motion' ;
+import { CharactersProps, CharactersData } from '../types';
 
-export interface CharactersData {
-  id: number;
-  name: string;
-  status: string;
-  species: string;
-  type ?: string;
-  gender: string;
-  origin: {
-    name: string;
-    url: string;
-  }; 
-  image: string;
-  episode: string[];
-}
 
-type Props = {
-  page: number;
-  setPage: (page:number) => void;
-}
-
-const Characters: React.FC<Props> = ({page, setPage }) => {
+const Characters: React.FC<CharactersProps> = ({page, setPage }) => {
 
   const [characters, setCharacters] = useState<CharactersData[]>([]);
 

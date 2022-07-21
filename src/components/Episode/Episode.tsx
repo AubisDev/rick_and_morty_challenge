@@ -1,9 +1,7 @@
 import React from 'react'
+import { EpisodeProps } from '../../types'
 
-interface EpisodeProps {
-  episode: string;
-  name: string;
-}
+
 
 const Episode: React.FC<EpisodeProps> = ({episode, name}) => {
   return (

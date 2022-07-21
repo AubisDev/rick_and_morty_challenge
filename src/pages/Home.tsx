@@ -34,10 +34,10 @@ const Home = () => {
           <Portal isActive={isActive} />
           
           {/* //! main container  */} 
-            <HomeMain  isActive={ isActive } setIsLoading={setIsLoading}/>
+          <HomeMain  isActive={ isActive } setIsLoading={setIsLoading}/>
           
-          {/* //! Logic for Morty Animation  */} 
-          {
+          {/* //! Logic para la Animacion de  Morty   */} 
+          { 
             isLoading ? <Loader/> :( !isActive ?  <Morty isActive={isActive}/> : <Morty isActive={isActive}/> )
           }
         </div>

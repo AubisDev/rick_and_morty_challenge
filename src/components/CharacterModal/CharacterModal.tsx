@@ -1,14 +1,12 @@
 import * as React from 'react'
-import { CharactersData } from '../../pages/Characters';
 import { motion } from 'framer-motion';
+import { CharacterModalProps } from '../../types';
 
-interface Props { 
-  setOpenModal: ( openModal:boolean ) => void;
-  character: CharactersData;
-}
 
-const CharacterModal: React.FC<Props> = ({ setOpenModal, character  }) => {
+const CharacterModal: React.FC<CharacterModalProps> = ({ setOpenModal, character  }) => {
+
   const {name, status, species, type, gender, origin, image, episode } = character;
+  
   return (
     <motion.div 
       id="model" 
