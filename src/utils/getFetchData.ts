@@ -1,10 +1,10 @@
 import axios, { AxiosResponse } from 'axios';
 import { CharactersData } from '../types/characters';
-import season1 from './../assets/images/season1.jpg'
-import season2 from './../assets/images/season2.png'
-import season3 from './../assets/images/season3.jpg'
-import season4 from './../assets/images/season4.jpg'
-import season5 from './../assets/images/season5.jpg'
+import season1 from './../assets/images/season1.webp'
+import season2 from './../assets/images/season2.webp'
+import season3 from './../assets/images/season3.webp'
+import season4 from './../assets/images/season4.webp'
+import season5 from './../assets/images/season5.webp'
 
 export async function getCharactersData ( baseUrl: string) {
   return await axios.get<CharactersData>(baseUrl).then( (response: AxiosResponse) => {
