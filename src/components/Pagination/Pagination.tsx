@@ -1,8 +1,11 @@
 import React from 'react'
 import ReactPaginate from 'react-paginate';
 import './Pagination.css';
-import { PaginationProps } from '../../types';
 
+interface PaginationProps {
+  page: number;
+  setPage: (page:number) => void;
+}
 
 
 const Pagination : React.FC<PaginationProps> = ({page,setPage }) => {
@@ -14,13 +17,13 @@ const Pagination : React.FC<PaginationProps> = ({page,setPage }) => {
   return (
     <>
       <ReactPaginate
-        className="h-[10vh] w-screen text-white flex justify-center items-center text-2xl "
         breakLabel="..."
+        className="flex justify-center h-[10vh] items-center text-white  text-2xl w-screen"
+        initialPage={page-1}
         nextLabel={`${page < 42 ? ' next >' : ''}`}
         onClick={ (e) => handlePagination(e)}
         pageRangeDisplayed={5}
         pageCount={42}
-        initialPage={page-1}
         previousLabel={`${page > 1 ? "< previous" : ''}`}
       />
     </>

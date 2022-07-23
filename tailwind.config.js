@@ -12,9 +12,6 @@ module.exports = {
         'home': '#9dd4d9',
         'green_slime': '#9bf264',
       },
-      backgroundImage: {
-        'char': 'url("/src/assets/images/home_bg.jpg")'
-      },
       dropShadow: {
         "morty": '0 10px 6px rgba(180,180,180,0.5)'
       },

@@ -1,5 +1,5 @@
 import React from 'react'
-import portal from './../../assets/images/portal.png';
+import portal from './../../assets/images/portal.webp';
 import { motion } from "framer-motion";
 
 type Props = {

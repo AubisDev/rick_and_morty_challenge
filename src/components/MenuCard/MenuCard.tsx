@@ -2,9 +2,13 @@ import React from 'react'
 import { motion } from "framer-motion";
 import './MenuCard.css';
 import { useNavigate } from 'react-router-dom';
-import { MenuCardProps } from '../../types';
+import { Sections } from '../Main/HomeMain';
 
-
+interface MenuCardProps {
+  section: Sections;
+  isActive: boolean;
+  setIsLoading: (isLoading: boolean ) => void;
+}
 
 const MenuCard: React.FC<MenuCardProps> = ({ section, isActive, setIsLoading }) => {
   const navigate = useNavigate();
