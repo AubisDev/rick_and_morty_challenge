@@ -1,10 +1,13 @@
-import React from 'react'
 import { motion } from "framer-motion";
 import Run_Morty from './../../assets/images/morty-running.gif';
 
-const Loader = () => {
+type LoaderProp ={
+  isLoading: boolean;
+}
+
+const Loader: React.FC<LoaderProp> = ({isLoading}) => {
   return (
-    <div className="absolute bottom-0 w-[15vw] ">
+    <div className={`absolute bottom-0 w-[15vw] ${!isLoading ? 'block' : 'hidden'}`}>
       <h1 className="font-2xl text-white text-right">Loading...</h1>
       <motion.img 
         className='drop-shadow-morty duration-500 -rotate-12 translate'

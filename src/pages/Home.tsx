@@ -14,33 +14,35 @@ const Home = () => {
 
   useEffect(() => {
     //Timer for Morty Home Animation
-    let timer = setTimeout( () => {
-      setIsActive(true);
-    }, 1750)
-    return () => {
-      clearTimeout( timer )
+    if( !isLoading ){
+      let timer = setTimeout( () => {
+        setIsActive(true);
+        
+      }, 2000)
+      return () => {
+        clearTimeout( timer )
+      }
     }
-  }, [])
+   
+  }, [isLoading])
 
   return (
     <>
-      <div className="w-screen h-[90vh] xl:flex xl:flex-col text-white at ">
-        <div className="w-4/5 h-full bg-white-30 m-auto flex justify-center items-center xl:justify-start xl:items-start flex-col xl:relative">
-
-          {/* //! Header con Bienvenido y Logo */} 
+      <div className="w-[90%] h-[90vh] mt-10 xl:mt-0 flex flex-col xl:flex-row m-auto items-center xl:items-start text-white justify-center xl:justify-start  ">
+        <div className=" w-4/5 xl:w-[30%] h-full flex flex-col xl:justify-between items-center xl:items-start">
           <HomeHeader/>
-
-          {/* //! Loader con Portal */} 
-          <Portal isActive={isActive} />
-          
-          {/* //! main container  */} 
-          <HomeMain  isActive={ isActive } setIsLoading={setIsLoading}/>
-          
-          {/* //! Logic para la Animacion de  Morty   */} 
           { 
-            isLoading ? <Loader/> :( !isActive ?  <Morty isActive={isActive}/> : <Morty isActive={isActive}/> )
-          }
+            isLoading ? <Loader isLoading={isLoading}/> 
+            : ( !isActive ?  <Morty isActive={isActive} isLoading={isLoading}/> 
+                          : <Morty isActive={isActive} isLoading={isLoading}/> 
+              )
+          } 
         </div>
+        <div className="w-4/5 sm:w-[90%]  xl:w-[70%] h-auto flex items-center mt-6 xl:mt-6  overflow-x-hidden">
+          { !isActive && <Portal isActive={isActive} />}
+          { isActive && <HomeMain  isActive={ isActive } setIsLoading={setIsLoading} isLoading={isLoading}/>}
+        </div>
+
       </div>
 
       <Footer/>

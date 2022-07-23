@@ -4,14 +4,15 @@ import morty1 from './../assets/images/morty-before.webp';
 import morty2 from './../assets/images/morty-after.webp';
 
 type Props = {
-  isActive: boolean
+  isActive: boolean;
+  isLoading: boolean;
 }
 
-const Morty: React.FC<Props> = ({ isActive }) => {
+const Morty: React.FC<Props> = ({ isActive, isLoading }) => {
   const mortyImage: string = !isActive ? morty1 : morty2;  
   return (
     <motion.img
-      className="absolute bottom-0 drop-shadow-morty left-0 -rotate-6 w-[20vw] xl:w-[25vw] hidden lg:block  "
+      className={`hidden xl:block w-[25vw] ${!isLoading ? 'block' : 'hidden'} `}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}

@@ -15,6 +15,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: #021519;
   font-family: 'Amatic SC', cursive;
+  overflow-x: hidden;
 }
 
 code {
